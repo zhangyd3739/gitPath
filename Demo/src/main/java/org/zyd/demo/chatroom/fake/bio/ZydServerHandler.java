@@ -1,4 +1,4 @@
-package org.zyd.demo.chatroom.bio.server;
+package org.zyd.demo.chatroom.fake.bio;
 
 import java.io.*;
 import java.net.Socket;
@@ -21,7 +21,6 @@ public class ZydServerHandler implements Runnable {
 	public void run() {
 		try {
 			String content = null;
-			// 循环从Socket中读取客户端发送过来的数据
 			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			while ((content = bufferedReader.readLine()) != null) {
 				// 将读到的内容向每个Socket发送一次
@@ -33,6 +32,7 @@ public class ZydServerHandler implements Runnable {
 					printWriter.flush();
 				}
 			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

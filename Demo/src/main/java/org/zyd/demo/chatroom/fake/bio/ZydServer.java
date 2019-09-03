@@ -1,4 +1,4 @@
-package org.zyd.demo.chatroom.bio.server;
+package org.zyd.demo.chatroom.fake.bio;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -18,6 +18,10 @@ public class ZydServer {
 	public static volatile List<Socket> clientList = new ArrayList<Socket>();
 
 	public static void main(String[] args) throws IOException {
+		// 创建线程池
+		ZydServerHandlerExecutePool singleExecutor = new ZydServerHandlerExecutePool(50, 1000);
+		// ExecutorService singleExecutor = Executors.newFixedThreadPool(10);
+		
 		// 创建一个ServerSocket，用于监听客户端Socket的连接请求
 		ServerSocket server = new ServerSocket(SERVER_PROT);
 		System.out.println("聊天室服务端启动，端口：" + SERVER_PROT);
@@ -25,8 +29,8 @@ public class ZydServer {
 			// 接收客户端连接
 			Socket socket = server.accept();
 			clientList.add(socket);
-			// 每连接一个客户端，启动一个ServerThread线程为该客户端服务
-			new Thread(new ZydServerHandler(socket)).start();
+			// 使用线程池处理消息
+			singleExecutor.execute(new ZydServerHandler(socket));
 		}
 	}
 
