@@ -1,4 +1,4 @@
-package org.zyd.demo.chatroom.fake.bio;
+package org.zyd.demo.chatroom.fake.nio;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutorService;
