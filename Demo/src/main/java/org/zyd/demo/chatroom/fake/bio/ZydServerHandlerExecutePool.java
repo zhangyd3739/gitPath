@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 服务端线程池
+ * 线程池
  * @author zhangyd
  *
  */

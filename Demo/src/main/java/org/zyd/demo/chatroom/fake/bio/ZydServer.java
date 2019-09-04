@@ -19,12 +19,11 @@ public class ZydServer {
 
 	public static void main(String[] args) throws IOException {
 		// 创建线程池
-		ZydServerHandlerExecutePool singleExecutor = new ZydServerHandlerExecutePool(50, 1000);
-		// ExecutorService singleExecutor = Executors.newFixedThreadPool(10);
+		ZydServerHandlerExecutePool singleExecutor = new ZydServerHandlerExecutePool(5, 100);
 		
 		// 创建一个ServerSocket，用于监听客户端Socket的连接请求
 		ServerSocket server = new ServerSocket(SERVER_PROT);
-		System.out.println("聊天室服务端启动，端口：" + SERVER_PROT);
+		System.out.println("伪异步,聊天室服务端启动，端口：" + SERVER_PROT);
 		while (true) {
 			// 接收客户端连接
 			Socket socket = server.accept();
