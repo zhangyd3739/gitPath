@@ -24,10 +24,6 @@ public class TestCloseIO {
 		}
 		end.await();
 		System.gc();
-		System.gc();
-		System.gc();
-		System.gc();
-		System.gc();
 		Thread.sleep(10 * 60 * 1000);
 	}
 
