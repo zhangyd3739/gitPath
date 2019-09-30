@@ -27,7 +27,6 @@ public class TestFileChannel {
 				while (charBuffer.hasRemaining()) {
 					System.out.print(charBuffer.get());
 				}
-
 				byteBuffer.clear();
 			}
 		} catch (FileNotFoundException e) {
@@ -41,7 +40,6 @@ public class TestFileChannel {
 				e.printStackTrace();
 			}
 		}
-
 	}
 
 	public static void main(String[] args) throws IOException {

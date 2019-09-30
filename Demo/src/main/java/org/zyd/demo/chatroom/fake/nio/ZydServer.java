@@ -20,7 +20,7 @@ public class ZydServer {
 	public static void main(String[] args) throws IOException {
 		// 创建线程池
 		ZydServerHandlerExecutePool singleExecutor = new ZydServerHandlerExecutePool(5, 100);
-		
+
 		// 创建一个ServerSocket，用于监听客户端Socket的连接请求
 		ServerSocket server = new ServerSocket(SERVER_PROT);
 		System.out.println("伪异步,聊天室服务端启动，端口：" + SERVER_PROT);
