@@ -122,7 +122,6 @@ public class ZydClient {
 		System.out.println("聊天记录：" + message.toString());
 	}
 
-	
 	public static void main(String[] args) throws Exception {
 		ZydClient zydClient = new ZydClient();
 		// 启动线程获取消息

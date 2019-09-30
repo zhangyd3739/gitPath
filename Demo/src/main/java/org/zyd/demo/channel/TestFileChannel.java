@@ -8,12 +8,18 @@ import java.nio.CharBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.charset.Charset;
 
+/**
+ * 
+ * @author zhangyd
+ *
+ */
 public class TestFileChannel {
 
 	private static void useFileChannel() {
 		RandomAccessFile aFile = null;
 		try {
 			aFile = new RandomAccessFile("d://新建文本文档.txt", "rw");
+			// 无法使用非阻塞方式读取，比AIO性能高。
 			FileChannel inChannel = aFile.getChannel();
 			ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
 			while (inChannel.read(byteBuffer) != -1) {
