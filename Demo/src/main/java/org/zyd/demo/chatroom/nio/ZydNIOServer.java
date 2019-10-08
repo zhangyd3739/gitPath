@@ -13,7 +13,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-public class ZydServer {
+public class ZydNIOServer {
 
 	/**
 	 * 服务端口
@@ -39,7 +39,7 @@ public class ZydServer {
 	 * 构造方法
 	 * @param port
 	 */
-	public ZydServer() {
+	public ZydNIOServer() {
 		this.initServer();
 	}
 	
@@ -50,8 +50,6 @@ public class ZydServer {
 
 	/**
 	 * 初始化
-	 * 
-	 * @param port
 	 */
 	private void initServer() {
 		try {
@@ -142,7 +140,7 @@ public class ZydServer {
 
 	
 	public static void main(String[] args) {
-		ZydServer zydServer = new ZydServer();
+		ZydNIOServer zydServer = new ZydNIOServer();
 		zydServer.listener();
 	}
 }

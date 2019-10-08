@@ -11,7 +11,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Set;
 
-public class ZydClient {
+public class ZydNIOClient {
 
 	// 服务端地址
 	static final String ADDRESS = "127.0.0.1";
@@ -37,7 +37,7 @@ public class ZydClient {
 	/**
 	 * 构造方法
 	 */
-	public ZydClient() {
+	public ZydNIOClient() {
 		this.initClient();
 	}
 
@@ -123,7 +123,7 @@ public class ZydClient {
 	}
 
 	public static void main(String[] args) throws Exception {
-		ZydClient zydClient = new ZydClient();
+		ZydNIOClient zydClient = new ZydNIOClient();
 		// 启动线程获取消息
 		zydClient.getDate();
 		// 从控制台输入消息
