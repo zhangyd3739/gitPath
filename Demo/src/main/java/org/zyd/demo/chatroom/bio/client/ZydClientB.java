@@ -15,7 +15,10 @@ public class ZydClientB {
 	public static void main(String[] args) throws Exception {
 		Socket socket = new Socket(ADDRESS, SERVER_PROT);
 		System.out.println("B启动聊天室");
-		// 启动线程接收服务端返回的消息
+		/**
+		 * 因为等待用户输入会导致主线程阻塞
+		 * 所以用主线程处理输入，新开一个线程处理读数据
+		 */
 		new Thread(new ZydClientHandler(socket)).start();
 
 		Scanner sc = new Scanner(System.in);
