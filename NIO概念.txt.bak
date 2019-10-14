@@ -19,3 +19,10 @@ https://zhuanlan.zhihu.com/p/51453522
 
 
 优雅的文件读写，JDK1.7
+
+// 写入文件（追加方式：StandardOpenOption.APPEND）
+Files.write(Paths.get(filePath), Content.getBytes(StandardCharsets.UTF_8), StandardOpenOption.APPEND);
+
+// 读取文件
+byte[] data = Files.readAllBytes(Paths.get(filePath));
+System.out.println(new String(data, StandardCharsets.UTF_8));
