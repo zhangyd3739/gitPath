@@ -14,7 +14,6 @@ https://www.cnblogs.com/diegodu/p/6823855.html
 https://blog.csdn.net/yjp198713/article/details/79300420
 
 
-同步、异步、阻塞、非阻塞
 https://zhuanlan.zhihu.com/p/51453522
 
 
@@ -28,4 +27,8 @@ byte[] data = Files.readAllBytes(Paths.get(filePath));
 System.out.println(new String(data, StandardCharsets.UTF_8));
 
 
+同步、异步、阻塞、非阻塞
+
 https://www.zhihu.com/question/19732473
+
+{GERENWENSHUGUIHUAISHUJUMOXING_YUANGONGXINGMING}

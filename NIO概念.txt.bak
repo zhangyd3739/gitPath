@@ -26,3 +26,8 @@ Files.write(Paths.get(filePath), Content.getBytes(StandardCharsets.UTF_8), Stand
 // ╤ах║нд╪Ч
 byte[] data = Files.readAllBytes(Paths.get(filePath));
 System.out.println(new String(data, StandardCharsets.UTF_8));
+
+
+https://www.zhihu.com/question/19732473
+
+{GERENWENSHUGUIHUAISHUJUMOXING_YUANGONGXINGMING}
