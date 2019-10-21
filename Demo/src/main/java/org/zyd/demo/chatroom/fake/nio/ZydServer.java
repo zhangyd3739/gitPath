@@ -25,7 +25,7 @@ public class ZydServer {
 		ServerSocket server = new ServerSocket(SERVER_PROT);
 		System.out.println("伪异步,聊天室服务端启动，端口：" + SERVER_PROT);
 		while (true) {
-			// 接收客户端连接
+			// 接收客户端连bbbbbbmb接
 			Socket socket = server.accept();
 			clientList.add(socket);
 			// 使用线程池处理消息

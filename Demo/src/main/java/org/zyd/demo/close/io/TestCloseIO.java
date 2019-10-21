@@ -6,19 +6,20 @@ import java.util.concurrent.CountDownLatch;
 /**
  * 测试IO close
  * 
- * linux查看文件占用: /usr/sbin/lsof -p 6692 -r5
+ * linux查看程序占用文件命令: /usr/sbin/lsof -p 6692 -r5
  * @author zhangyd
  *
  */
 public class TestCloseIO {
 
-	static final int threadSize = 10;
+	static final int threadSize = Integer.MAX_VALUE;
 
 	public static void main(String[] args) throws Exception {
 		FileInputStream fis = new FileInputStream("/logs/test1.log");
 		CountDownLatch end = new CountDownLatch(threadSize);
 		for (int i = 0; i < threadSize; i++) {
 			String threadName = "thread_" + i;
+			System.out.println(threadName);
 			MyThead thread = new MyThead(threadName, end);
 			thread.start();
 		}

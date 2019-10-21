@@ -32,3 +32,7 @@ System.out.println(new String(data, StandardCharsets.UTF_8));
 https://www.zhihu.com/question/19732473
 
 {GERENWENSHUGUIHUAISHUJUMOXING_YUANGONGXINGMING}
+
+lsof?-n|awk?'{print?$3}'|sort|uniq?-c|sort?-nr|more
+
+lsof -n|awk '{print $2}'|sort|uniq -c|sort -nr|more
