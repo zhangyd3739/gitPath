@@ -3,16 +3,10 @@ package org.zyd.demo.chatroom.aio.server;
 import java.nio.ByteBuffer;
 import java.nio.channels.AsynchronousSocketChannel;
 import java.nio.channels.CompletionHandler;
-import java.nio.charset.Charset;
 
 public class ReadCompletionHandler implements CompletionHandler<Integer, AsynchronousSocketChannel> {
 
 	private ByteBuffer buffer;
-	
-	/**
-	 * 字符集
-	 */
-	private final Charset charset = Charset.forName("UTF-8");
 
 	public ReadCompletionHandler(ByteBuffer buffer) {
 		this.buffer = buffer;
