@@ -13,7 +13,7 @@ public class AcceptCompletionHandler implements CompletionHandler<AsynchronousSo
 			// 把每个客户端通道保存到客户端列表
 			ZydAIOServer.clientList.add(result);
 
-			ByteBuffer buffer = ByteBuffer.allocate(1024);
+			final ByteBuffer buffer = ByteBuffer.allocate(1024);
 
 			result.read(buffer, result, new ReadCompletionHandler(buffer));
 

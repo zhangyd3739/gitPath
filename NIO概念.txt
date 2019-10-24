@@ -1,17 +1,15 @@
 https://www.jianshu.com/p/07d3d421a877
 
+操作系统IO
+https://www.cnblogs.com/diegodu/p/6823855.html
+
+https://blog.csdn.net/yjp198713/article/details/79300420
 
 Buffers/Channels/Selectors
 
 Channels是输入/输出的管道, 所有的读写操作都需要通过它来完成. Channel读写的粒度是Block, 而不是像流IO一样, 提供一个字节流或者字符流的抽象. 这个Block的抽象即Buffer. 所有的读操作会由Channel将数据读入Buffer, 然后用户来处理Buffer, 所有的写操作需要先将数据填到Buffer中, 再由Channel来消费Buffer中的数据. NIO的第三个核心概念是Selector, 它是一个事件监控器, 我们将它注册我们所感兴趣的IO事件, 并且对其进行Polling, 来确定事件是否发生, 发生则做相应的IO操作. 其中, Selector所监控的对象是Channel, 我们在Selector上声明我们关心哪一个Channel的什么事件, Selector会监控这些Channels, 并在事件发生时通知我们.
 
 
-操作系统IO
-https://www.cnblogs.com/diegodu/p/6823855.html
-
-
-
-https://blog.csdn.net/yjp198713/article/details/79300420
 
 
 https://zhuanlan.zhihu.com/p/51453522
@@ -30,9 +28,3 @@ System.out.println(new String(data, StandardCharsets.UTF_8));
 同步、异步、阻塞、非阻塞
 
 https://www.zhihu.com/question/19732473
-
-{GERENWENSHUGUIHUAISHUJUMOXING_YUANGONGXINGMING}
-
-lsof?-n|awk?'{print?$3}'|sort|uniq?-c|sort?-nr|more
-
-lsof -n|awk '{print $2}'|sort|uniq -c|sort -nr|more
