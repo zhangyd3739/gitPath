@@ -7,7 +7,7 @@ import java.nio.channels.AsynchronousSocketChannel;
 import java.nio.charset.Charset;
 import java.util.Scanner;
 
-public class ZydAIOClient1 {
+public class ZydAIOClient2 {
 
 	// 服务端地址
 	static final String ADDRESS = "127.0.0.1";
@@ -28,7 +28,7 @@ public class ZydAIOClient1 {
 	/**
 	 * 构造方法
 	 */
-	public ZydAIOClient1() {
+	public ZydAIOClient2() {
 		this.initClient();
 	}
 
@@ -39,7 +39,7 @@ public class ZydAIOClient1 {
 		try {
 			clientSocketChannel = AsynchronousSocketChannel.open();
 			clientSocketChannel.connect(new InetSocketAddress(ADDRESS, SERVER_PROT));
-			System.out.println("AIO客户端1启动");
+			System.out.println("AIO客户端2启动");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -63,7 +63,7 @@ public class ZydAIOClient1 {
 	}
 
 	public static void main(String[] args) throws Exception {
-		ZydAIOClient1 zydAIOClient = new ZydAIOClient1();
+		ZydAIOClient2 zydAIOClient = new ZydAIOClient2();
 		// 注册读数据事件
 		zydAIOClient.getDate();
 
